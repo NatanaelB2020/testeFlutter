@@ -1,4 +1,4 @@
-package com.testeflutter.DTOs;
+package com.testeflutter.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

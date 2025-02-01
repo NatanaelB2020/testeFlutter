@@ -1,11 +1,11 @@
-package com.testeflutter.Controller;
+package com.testeflutter.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.testeflutter.DTOs.PessoaDTO;
+import com.testeflutter.dtos.PessoaDTO;
 import com.testeflutter.service.PessoaService;
 
 import java.util.List;

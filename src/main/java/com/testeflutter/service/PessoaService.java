@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.testeflutter.DTOs.PessoaDTO;
+import com.testeflutter.dtos.PessoaDTO;
 import com.testeflutter.entity.Pessoa;
 import com.testeflutter.mappers.PessoaMapper;
 import com.testeflutter.repository.PessoaRepository;

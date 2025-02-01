@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-import com.testeflutter.DTOs.PessoaDTO;
+import com.testeflutter.dtos.PessoaDTO;
 import com.testeflutter.entity.Pessoa;
 
 @Mapper(componentModel = "spring")
