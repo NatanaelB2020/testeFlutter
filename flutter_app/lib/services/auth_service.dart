@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/material.dart'; // Necessário para ChangeNotifier
 
-class AuthService {
+class AuthService extends ChangeNotifier {  // Extende ChangeNotifier
   final String apiUrl = 'http://localhost:8080/auth';
 
   // Realizar o login
@@ -18,6 +19,7 @@ class AuthService {
       final token = data['token'];
       if (token != null) {
         await _saveToken(token);
+        notifyListeners();  // Notifica os ouvintes quando o estado mudar
         return true;
       }
     }
@@ -27,16 +29,14 @@ class AuthService {
   // Realizar o registro
   Future<bool> register(String username, String password) async {
     final response = await http.post(
-      Uri.parse('$apiUrl/register'), // Verifique se este endpoint existe no seu backend
+      Uri.parse('$apiUrl/register'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({'username': username, 'password': password}),
     );
 
     if (response.statusCode == 201) {
-      // Registro bem-sucedido
       return true;
     } else {
-      // Erro no registro
       return false;
     }
   }
@@ -57,5 +57,6 @@ class AuthService {
   Future<void> logout() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('token');
+    notifyListeners();  // Notifica quando o estado mudar
   }
 }

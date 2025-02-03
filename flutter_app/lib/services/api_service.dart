@@ -52,4 +52,8 @@ class ApiService {
   Future<http.Response> doadoresPorTipoSanguineo() async {
     return await _authenticatedRequest(Endpoints.doadoresPorTipoSanguineo, 'GET');
   }
+
+  Future<http.Response> candidatosPorEstadoEspecifico(String estado) async {
+    return await _authenticatedRequest("${Endpoints.candidatosPorEstado}/$estado", 'GET');
+  }
 }
