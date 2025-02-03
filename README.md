@@ -75,4 +75,4 @@ Desenvolver um sistema mobile que carregue um JSON salvo no dispositivo com os d
 1. Instale o Java e o Maven.
 2. Clone o repositório:
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone (https://github.com/NatanaelB2020/testeFlutter.git)
