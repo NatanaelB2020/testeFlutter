@@ -37,6 +37,12 @@ Desenvolver um sistema mobile que carregue um JSON salvo no dispositivo com os d
 - **Banco de Dados:** MySQL
 - **Gerenciamento de Pacotes:** Maven (Java) e Pub (Flutter)
 
+## Estrutura de Dados
+
+A pasta **`data/`** contém os arquivos necessários para a inicialização do banco de dados, incluindo:
+- Scripts SQL para a **criação das tabelas**.
+- Arquivo **JSON com os dados** para alimentar a tabela `pessoa`.
+
 ## Requisitos de Implementação
 
 ### **Back-end**
@@ -75,4 +81,4 @@ Desenvolver um sistema mobile que carregue um JSON salvo no dispositivo com os d
 1. Instale o Java e o Maven.
 2. Clone o repositório:
    ```sh
-   git clone (https://github.com/NatanaelB2020/testeFlutter.git)
+   git clone https://github.com/NatanaelB2020/testeFlutter.git
