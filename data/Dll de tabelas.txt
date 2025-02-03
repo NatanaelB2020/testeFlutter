@@ -1,0 +1,39 @@
+-- persona.pessoas definição
+
+CREATE TABLE `pessoas` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `altura` double DEFAULT NULL,
+  `bairro` varchar(255) DEFAULT NULL,
+  `celular` varchar(255) DEFAULT NULL,
+  `cep` varchar(255) DEFAULT NULL,
+  `cidade` varchar(255) DEFAULT NULL,
+  `cpf` varchar(255) NOT NULL,
+  `data_nasc` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `endereco` varchar(255) DEFAULT NULL,
+  `estado` varchar(255) DEFAULT NULL,
+  `mae` varchar(255) DEFAULT NULL,
+  `nome` varchar(255) NOT NULL,
+  `numero` int DEFAULT NULL,
+  `pai` varchar(255) DEFAULT NULL,
+  `peso` int DEFAULT NULL,
+  `rg` varchar(255) NOT NULL,
+  `sexo` varchar(255) DEFAULT NULL,
+  `telefone_fixo` varchar(255) DEFAULT NULL,
+  `tipo_sanguineo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UKc7pqbmo6e96slvonilywsb8oe` (`cpf`),
+  UNIQUE KEY `UKggc1gmaya889fgcl2u3t2s1cw` (`rg`),
+  UNIQUE KEY `UKouqc5requard3nhnb6u3wvksm` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- persona.`user` definição
+
+CREATE TABLE `user` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `enabled` bit(1) NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
